@@ -3,24 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Match Game</title>
-    <link rel="stylesheet" href="/styles/main.css">
-    <script type="text/javascript" src="jquery-1.8.3.js"></script>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header>
       <h1>Match Game</h1>
-      <h2>0 Moves</h2>
-      <h3 id='time'>Time Stamp:</h3>
+      <h2 id="moves">0 Moves</h2>
+      <ul id='star'></ul>
+      <h2 id='time'>Time Stamp:</h2>
     </header>
-    <section>
-      <button class="card" type="button" name="1">card 1</button>
-      <button class="card" type="button" name="1">card 1</button>
-      <button class="card" type="button" name="2">card 2</button>
-      <button class="card" type="button" name="2">card 2</button>
-      <button class="card" type="button" name="3">card 3</button>
-      <button class="card" type="button" name="3">card 3</button>
-    </section>
+    <section id="game"></section>
     <button type="button" name="reset">Restart Game</button>
   </body>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>

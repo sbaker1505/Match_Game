@@ -1,0 +1,43 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+li {
+  list-style: none;
+  display: inline;
+  font-size: 24px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: dimgrey;
+  border: none;
+  font-size: 50px;
+  color: white;
+}
+
+.selected {
+  backface-visibility: hidden;
+  transition-duration: 1.5s;
+  transform: rotate3d(0,1,0,180deg);
+  background-color: blue;
+}
+
+.correct {
+  background-color: black;
+}
+
+.wrong {
+  background-color: red;
+}
