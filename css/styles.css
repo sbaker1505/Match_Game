@@ -17,6 +17,11 @@ li {
   font-size: 24px;
 }
 
+.game {
+  height: 100px;
+  display: flex;
+}
+
 .card {
   width: 100px;
   height: 100px;
@@ -28,7 +33,6 @@ li {
 }
 
 .selected {
-  backface-visibility: hidden;
   transition-duration: 1.5s;
   transform: rotate3d(0,1,0,180deg);
   background-color: blue;

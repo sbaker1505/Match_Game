@@ -15,11 +15,13 @@ var cardSet = [{
 }];
 
 var cardArray = [];
-cardSet.forEach(function(element, index){
-  var formattedCard = card.replace('%class%', element.class).replace('%name%', element.name);
+cardSet.forEach(function(element){
+  var formattedCard = card.replace('%name%', element.name);
   cardArray.push(formattedCard, formattedCard);
   return cardArray;
 })
+
+// .replace('%class%', element.class)
 
 // Randomize Cards
 cardArray.sort(function(a, b){return 0.5 - Math.random()});
@@ -64,6 +66,25 @@ $('.card').click(function(){
     } else {
       $('.selected').addClass('wrong').prop('disabled', false).removeClass('wrong selected');
       matchCheck = [];
+    }
+  }
+});
+
+// Rotation
+// $('.card').click(function showCard(){
+//   var name = this.prop('name');
+//   for (var i=0;i<cardSet.length;i++){
+//     if (name === cardSet[i].name){
+//       this.replace('%class%', cardSet[i].class);
+//     }
+//   }
+// });
+
+$('.card').click(function(){
+  for (i = 0; i < cardSet.length; i++){
+    if ($(this).prop('name') === cardSet[i].name){
+       $(this).removeClass("zocial-%class%").addClass('zocial-'+cardSet[i].class);
+      // $(this).replace('%class%', cardSet[i].class);
     }
   }
 });
