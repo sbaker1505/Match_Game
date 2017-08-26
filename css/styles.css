@@ -1,5 +1,4 @@
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-@import url(http://weloveiconfonts.com/api/?family=zocial);
+@import url(http://weloveiconfonts.com/api/?family=entypo|zocial);
 
 /* entypo */
 [class*="entypo-"]:before {
@@ -11,31 +10,70 @@
   font-family: 'zocial', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: white;
+}
+
+.container {
+  background-color: coral;
+  width: 900px;
+  margin: auto;
+}
+
+header {
+  width: 840px;
+  margin: auto;
+}
+
+
+#info-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset {
+  width: 100%;
+  height: 50px;
+  margin: 20px 5px;
+  border-radius: 10px;
+  border: none;
+}
+
 li {
   list-style: none;
   display: inline;
   font-size: 24px;
 }
 
-.game {
-  height: 100px;
+#game {
+  width: 840px;
   display: flex;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 .card {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin: 5px;
+  box-sizing: border-box;
   background-color: dimgrey;
   border: none;
-  font-size: 50px;
+  border-radius: 10px;
+  font-size: 100px;
   color: white;
+  transform: rotate3d(0,1,0,180deg);
 }
 
 .selected {
-  transition-duration: 1.5s;
-  transform: rotate3d(0,1,0,180deg);
-  background-color: blue;
+  opacity: 1;
+  color: transparent;
+  animation: 1.5s show-card;
 }
 
 .correct {
@@ -43,5 +81,17 @@ li {
 }
 
 .wrong {
+  transition-duration: 1.5s;
+  transform: rotate3d(0,1,0,180deg);
   background-color: red;
+}
+
+@keyframes show-card {
+  0% {
+    transform: rotate3d(0,1,0,0deg);
+  }
+  50% {
+    opacity: 0;
+    background-color: blue;
+  }
 }

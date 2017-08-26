@@ -1,5 +1,5 @@
 // Card Populate
-var card = '<button class="card zocial-%class%" type="button" name="%name%"></button>';
+var card = '<button class="card entypo-heart-empty" type="button" name="%name%"></button>';
 var cardSet = [{
   class:  'appstore',
   name:   'apple'
@@ -12,22 +12,32 @@ var cardSet = [{
 },{
   class:  'evernote',
   name:   'elephant'
+},{
+  class:  'dribbble',
+  name:   'basketball'
+},{
+  class:  'drupal',
+  name:   'masked'
+},{
+  class:  'reddit',
+  name:   'allien'
+},{
+  class:  'pinboard',
+  name:   'tack'
 }];
 
 var cardArray = [];
 cardSet.forEach(function(element){
-  var formattedCard = card.replace('%name%', element.name);
+  var formattedCard = card.replace('%class%', element.class).replace('%name%', element.name);
   cardArray.push(formattedCard, formattedCard);
   return cardArray;
 })
-
-// .replace('%class%', element.class)
 
 // Randomize Cards
 cardArray.sort(function(a, b){return 0.5 - Math.random()});
 
 // Add Cards to HTML
-$('#game').append(cardArray);
+$('#game').prepend(cardArray);
 
 // Move count
 var move = 0;
@@ -51,6 +61,15 @@ var stars = '<li class="entypo-star"></li>';
 $('#star').html(stars.repeat(3));
 
 // Time Stamp
+var time = 0;
+$('.card').click(function(){
+  if (time === 0){
+    setInterval(function(){
+      $('#time').text('Time: '+ time +' sec.');
+      time++;
+    },1000);
+  }
+})
 
 
 // Find Match
@@ -71,20 +90,10 @@ $('.card').click(function(){
 });
 
 // Rotation
-// $('.card').click(function showCard(){
-//   var name = this.prop('name');
-//   for (var i=0;i<cardSet.length;i++){
-//     if (name === cardSet[i].name){
-//       this.replace('%class%', cardSet[i].class);
-//     }
-//   }
-// });
-
 $('.card').click(function(){
   for (i = 0; i < cardSet.length; i++){
     if ($(this).prop('name') === cardSet[i].name){
-       $(this).removeClass("zocial-%class%").addClass('zocial-'+cardSet[i].class);
-      // $(this).replace('%class%', cardSet[i].class);
+        $(this).addClass('zocial-'+cardSet[i].class);
     }
   }
 });
