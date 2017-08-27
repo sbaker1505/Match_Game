@@ -1,31 +1,17 @@
 // Card Populate
-var card = '<button class="card entypo-heart-empty" type="button" name="%name%"></button>';
-var cardSet = [{
-  class:  'appstore',
-  name:   'apple'
-},{
-  class:  'android',
-  name:   'robot'
-},{
-  class:  'plancast',
-  name:   'penguin'
-},{
-  class:  'evernote',
-  name:   'elephant'
-},{
-  class:  'dribbble',
-  name:   'basketball'
-},{
-  class:  'drupal',
-  name:   'masked'
-},{
-  class:  'reddit',
-  name:   'allien'
-},{
-  class:  'pinboard',
-  name:   'tack'
-}];
+var card = '<button class="card" type="button" name="%name%"></button>';
+var cardSet = [
+              {class:  'appstore',  name:   'apple'},
+              {class:  'android',   name:   'robot'},
+              {class:  'plancast',  name:   'penguin'},
+              {class:  'evernote',  name:   'elephant'},
+              {class:  'dribbble',  name:   'basketball'},
+              {class:  'drupal',    name:   'masked'},
+              {class:  'reddit',    name:   'allien'},
+              {class:  'pinboard',  name:   'tack'}
+              ];
 
+// Format Cards and double
 var cardArray = [];
 cardSet.forEach(function(element){
   var formattedCard = card.replace('%class%', element.class).replace('%name%', element.name);
@@ -71,29 +57,40 @@ $('.card').click(function(){
   }
 })
 
-
-// Find Match
+// On Click
 var matchCheck = [];
 $('.card').click(function(){
   $(this).addClass('selected').prop('disabled', true);
   matchCheck.push($(this).prop('name'));
-  console.log(matchCheck);
-  if(matchCheck.length === 2){
-    if(matchCheck[0] === matchCheck[1]){
-      $('.selected').addClass('correct').removeClass('selected');
-      matchCheck = [];
-    } else {
-      $('.selected').addClass('wrong').prop('disabled', false).removeClass('wrong selected');
-      matchCheck = [];
-    }
-  }
-});
 
-// Rotation
-$('.card').click(function(){
+  if(matchCheck.length === 2){
+    $('.card').prop('disabled', true);
+  }
+
+  // Add Icon
   for (i = 0; i < cardSet.length; i++){
     if ($(this).prop('name') === cardSet[i].name){
         $(this).addClass('zocial-'+cardSet[i].class);
     }
   }
+
+  setTimeout(function(){
+    // Find Match
+    if(matchCheck.length === 2){
+      if(matchCheck[0] === matchCheck[1]){
+        $('.selected').addClass('correct').removeClass('selected');
+        $('.card:not(.correct)').prop('disabled', false);
+        matchCheck = [];
+      } else {
+        $('.selected').addClass('wrong')
+        setTimeout(function(){
+          for (i = 0; i < cardSet.length; i++){
+            $('.wrong').removeClass('zocial-'+cardSet[i].class);
+          }
+          $('.card:not(.correct)').prop('disabled', false).removeClass('wrong selected');
+        }, 500);
+        matchCheck = [];
+      }
+    }
+  }, 1000);
 });

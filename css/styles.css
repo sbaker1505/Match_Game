@@ -30,6 +30,17 @@ header {
   margin: auto;
 }
 
+h1, #moves {
+  text-align: center;
+}
+
+h2, #star {
+  width: 200px;
+}
+
+#star {
+  text-align: right;
+}
 
 #info-line {
   display: flex;
@@ -67,31 +78,39 @@ li {
   border-radius: 10px;
   font-size: 100px;
   color: white;
-  transform: rotate3d(0,1,0,180deg);
 }
 
 .selected {
-  opacity: 1;
-  color: transparent;
-  animation: 1.5s show-card;
+  color: blue;
+  animation-name: rotate;
+  animation-duration: 1000ms;
 }
 
 .correct {
   background-color: black;
+  animation-name: scale;
+  animation-duration: 500ms;
 }
 
 .wrong {
-  transition-duration: 1.5s;
-  transform: rotate3d(0,1,0,180deg);
+  position: relative;
   background-color: red;
+  animation-name: shake;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
 }
 
-@keyframes show-card {
-  0% {
-    transform: rotate3d(0,1,0,0deg);
-  }
-  50% {
-    opacity: 0;
-    background-color: blue;
-  }
+@keyframes shake {
+  0% {left: 5px;}
+  50% {right: -5px;}
+}
+
+@keyframes scale {
+  25% {transform: scale(1.25);}
+  75% {transform: scale(0.75);}
+}
+
+@keyframes rotate {
+  0% {transform: rotateY(180deg);}
+  50% {transform: rotateY(0deg);}
 }
