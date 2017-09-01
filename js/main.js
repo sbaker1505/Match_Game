@@ -29,17 +29,15 @@ $('#game').prepend(cardArray);
 var move = 0;
 $('.card').click(function(){
   move += .5;
-  $('#moves').html(move + ' Moves');
-  console.log(move);
-  if (move >= 3){
+  $('#moves').html(Math.floor(move) + ' Moves');
+  // Stars change to empty stars based on number of moves
+  if (move === 3){
     $('.entypo-star:last-child').addClass('entypo-star-empty');
-  };
-  if (move >= 10){
+  } else if (move === 10){
     $('.entypo-star:nth-child(2)').addClass('entypo-star-empty');
-  };
-  if (move >= 14){
+  } else if (move === 14){
     $('.entypo-star:first-child').addClass('entypo-star-empty');
-  };
+  }
 });
 
 // Stars
@@ -47,42 +45,73 @@ var stars = '<li class="entypo-star"></li>';
 $('#star').html(stars.repeat(3));
 
 // Time Stamp
+var clock;
 var time = 0;
+var start = 0;
+// Start time on click of first card
 $('.card').click(function(){
-  if (time === 0){
-    setInterval(function(){
-      $('#time').text('Time: '+ time +' sec.');
-      time++;
-    },1000);
+  if (start === 0) {
+    start++;
+    startClock();
   }
 })
+// start clock
+function startClock() {
+  clock = setInterval(addTime, 1000);
+}
+// add time to HTML and increment time
+function addTime() {
+  $('#time').text(time +' sec.');
+  time++;
+}
+// stop clock
+function stopTime() {
+  clearInterval(clock);
+}
+// call stop clock function if all cards are correct
+if (correctCards === cardSet.length) {
+  stopTime();
+}
 
 // On Click
 var matchCheck = [];
+var correctCards = 0;
 $('.card').click(function(){
+
+  // Start time on click of first card
+  if (start === 0) {
+    start++;
+    startClock();
+  }
+
+  // adds class selected to card that is selected
   $(this).addClass('selected').prop('disabled', true);
   matchCheck.push($(this).prop('name'));
-
+  // disables the selection of other cards while matching is being processed
   if(matchCheck.length === 2){
     $('.card').prop('disabled', true);
   }
 
-  // Add Icon
+  // Add Icon to cards based on the property 'Name'
   for (i = 0; i < cardSet.length; i++){
     if ($(this).prop('name') === cardSet[i].name){
         $(this).addClass('zocial-'+cardSet[i].class);
     }
   }
 
+  // delays the matching and adding of classes for animation of card to finish
   setTimeout(function(){
-    // Find Match
+    // Find Match, if match is true add class of correct else add class wrong and removed class selected and wrong
     if(matchCheck.length === 2){
       if(matchCheck[0] === matchCheck[1]){
         $('.selected').addClass('correct').removeClass('selected');
         $('.card:not(.correct)').prop('disabled', false);
         matchCheck = [];
+        correctCards++;
+        console.log(correctCards)
       } else {
-        $('.selected').addClass('wrong')
+        $('.selected').addClass('wrong');
+        // delays class removal so animation can complete
         setTimeout(function(){
           for (i = 0; i < cardSet.length; i++){
             $('.wrong').removeClass('zocial-'+cardSet[i].class);
@@ -92,5 +121,10 @@ $('.card').click(function(){
         matchCheck = [];
       }
     }
-  }, 1000);
+  }, 300);
+});
+
+// Reload page
+$('.reset').click(function(){
+  location.reload();
 });

@@ -1,4 +1,5 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo|zocial);
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i|Playfair+Display+SC:900i');
 
 /* entypo */
 [class*="entypo-"]:before {
@@ -13,20 +14,21 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-html {
   background-color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
 }
 
 .container {
-  background-color: coral;
-  width: 900px;
-  margin: auto;
+  border: 1px solid #ff7919;
+  border-radius: 25px;
+  max-width: 800px;
+  width: calc(100% - 40px);
+  margin: 20px auto;
 }
 
-header {
-  width: 840px;
+header, #game {
+  width: calc(100% - 40px);
   margin: auto;
 }
 
@@ -34,12 +36,24 @@ h1, #moves {
   text-align: center;
 }
 
+h1 {
+  font-family: "Playfair Display SC", serif;
+  font-size: 2.5em;
+  color: #ff7919;
+}
+
 h2, #star {
-  width: 200px;
+  width: 100%;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 1.25em;
 }
 
 #star {
   text-align: right;
+  color: #ff7919;
 }
 
 #info-line {
@@ -49,54 +63,54 @@ h2, #star {
 
 .reset {
   width: 100%;
-  height: 50px;
-  margin: 20px 5px;
-  border-radius: 10px;
+  height: 40px;
+  border-radius: 20px;
   border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  background-color: #c9dbff;
 }
 
 li {
   list-style: none;
   display: inline;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 #game {
-  width: 840px;
   display: flex;
   flex-wrap: wrap;
-  margin: auto;
 }
 
 .card {
-  width: 200px;
-  height: 200px;
+  width: calc((100% - 40px)/4);
+  height: 125px;
   margin: 5px;
   box-sizing: border-box;
-  background-color: dimgrey;
+  background-color: #445d8e;
   border: none;
   border-radius: 10px;
-  font-size: 100px;
+  font-size: 4em;
   color: white;
 }
 
 .selected {
-  color: blue;
   animation-name: rotate;
   animation-duration: 1000ms;
 }
 
 .correct {
-  background-color: black;
+  background-color: #63a855;
   animation-name: scale;
-  animation-duration: 500ms;
+  animation-duration: 300ms;
 }
 
 .wrong {
   position: relative;
   background-color: red;
   animation-name: shake;
-  animation-duration: 100ms;
+  animation-duration: 150ms;
   animation-iteration-count: infinite;
 }
 
