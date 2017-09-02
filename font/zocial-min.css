@@ -1,12 +1,3 @@
-@charset "UTF-8";
-@font-face {
-  font-family: 'zocial';
-  font-style: normal;
-  font-weight: normal;
-  src: url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.eot');
-  src: url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.eot?#iefix') format('eot'), url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.woff') format('woff'), url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.ttf') format('truetype'), url('http://weloveiconfonts.com/api/fonts/zocial/zocial-regular-webfont.svg#zocialregular') format('svg');
-}
-
 .zocial-acrobat:before {
   content: "\00E3"
 }
