@@ -1,4 +1,4 @@
-@import url('http://weloveiconfonts.com/api/?family=entypo|zocial');
+/*@import url('http://weloveiconfonts.com/api/?family=entypo|zocial');*/
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i|Playfair+Display+SC:900i');
 
 /* entypo */
@@ -173,4 +173,12 @@ p {
 @keyframes rotate {
   0% {transform: rotateY(180deg);}
   50% {transform: rotateY(0deg);}
+}
+
+/* media query */
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+
 }
