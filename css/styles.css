@@ -14,7 +14,6 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: white;
   font-family: 'Lato', sans-serif;
   font-size: 16px;
 }
@@ -32,6 +31,14 @@ header, #game {
   margin: auto;
 }
 
+header {
+  height: 90px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
 h1, #moves {
   text-align: center;
 }
@@ -42,7 +49,7 @@ h1 {
   color: #ff7919;
 }
 
-h2, #star {
+h2, .star {
   width: 100%;
 }
 
@@ -51,7 +58,7 @@ h2 {
   font-size: 1.25em;
 }
 
-#star {
+.star {
   text-align: right;
   color: #ff7919;
 }
@@ -112,6 +119,45 @@ li {
   animation-name: shake;
   animation-duration: 150ms;
   animation-iteration-count: infinite;
+}
+
+#popup {
+  display: none;
+}
+
+.show {
+  width: 400px;
+  height: 400px;
+  background-color: #ff7919;
+  border-radius: 50px;
+  z-index: 99;
+  position: absolute;
+  left: calc(50% - 200px);
+  top: calc(390px - 200px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  margin: 20px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.show .star {
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  margin: 20px 0;
 }
 
 @keyframes shake {
