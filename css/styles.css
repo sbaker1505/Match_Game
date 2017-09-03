@@ -176,9 +176,74 @@ p {
 }
 
 /* media query */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px)
-  and (-webkit-device-pixel-ratio: 2) {
+/* based on ipad - landscape */
+@media only screen and (max-device-width: 1050px)
+                   and (max-device-height: 800px)
+                   and (orientation: landscape) {
+  .container {
+    max-width: 100%;
+  }
 
+  .show {
+    width: 600px;
+    left: calc(50% - 300px);
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+   p {
+    font-size: 2em;
+  }
+
+  .show .star {
+    font-size: 5em;
+  }
+}
+
+/* based on ipad - portrait */
+@media only screen and (max-device-height: 1050px)
+                   and (max-device-width: 800px)
+                   and (orientation: portrait) {
+  .container {
+    max-width: 100%;
+  }
+
+  .card {
+    height: 190px;
+  }
+
+  .show {
+    height: 500px;
+    top: calc(520px - 250px);
+  }
+}
+
+/* based on iphone 6 */
+@media only screen and (max-device-width: 480px) {
+  .card {
+    height: 105px;
+    font-size: 3em;
+  }
+
+  .show {
+    width: 250px;
+    height: 300px;
+    left: calc(50% - 125px);
+    top: calc(350px - 150px);
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .show .star {
+    font-size: 2.5em;
+  }
 }
