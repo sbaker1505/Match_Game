@@ -57,8 +57,6 @@ $('.star').html(stars.repeat(3));
 // Stars change to empty stars based on number of moves
 function starCount() {
   switch (move) {
-    case 20:
-      $('.star li:first-child').addClass('entypo-star-empty');
     case 16:
       $('.star li:nth-child(2)').addClass('entypo-star-empty');
     case 12:

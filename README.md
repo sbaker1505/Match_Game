@@ -12,7 +12,7 @@ There are 16 cards and the goal is to find all the matching pairs in a timely ma
 
 ### Game Scoring
 
-The scoring is graphically shown with 3 solid stars that decrease based on number of moves. For a perfect score or 3 stars **(★★★)** , you will need to match all the cards in under 12 moves. Alternatively, 2 stars **(★★☆)** equals 12 to 15 moves and 1 star **(★☆☆)** equals 16 to 19 moves with 20 or more moves resulting in no stars **(☆☆☆)**.
+The scoring is graphically shown with 3 solid stars that decrease based on number of moves. For a perfect score or 3 stars **(★★★)** , you will need to match all the cards in under 12 moves. Alternatively, 2 stars **(★★☆)** equals 12 to 15 moves and 1 star **(★☆☆)** equals 16 or more moves.
 
 --------------------------------------------------------------------------------
 
