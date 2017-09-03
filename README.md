@@ -16,7 +16,7 @@ The scoring is graphically shown with 3 solid stars that decrease based on numbe
 ## Developer Notes
 1. The Javascript file utilizes the jQuery library. I have downloaded the jQuery version 3.2.1 file and it is located in the **js** folder.
 
-1. There were some http security issues with Github when trying to use [weloveiconfonts.com](http://weloveiconfonts.com) for the Entypo and Zocial fonts. To fix this, I downloaded the linked url files from the weloveiconfonts [Github](https://github.com/TimPietrusky/weloveiconfonts) and placed them in a folder called 'font' and relinked all the necessary paths to those files.  
+1. There were some http security issues with Github when trying to use [weloveiconfonts.com](http://weloveiconfonts.com) for the Entypo and Zocial fonts. To fix this, I downloaded the linked url files from the weloveiconfonts [Github](https://github.com/TimPietrusky/weloveiconfonts) and placed them in a folder called **font** and relinked all the necessary paths to those files.  
 
 #### Known Bugs
 There are currently no known bugs. If you find one, please leave a comment describing the bug.
