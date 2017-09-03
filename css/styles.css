@@ -176,40 +176,9 @@ p {
 }
 
 /* media query */
-/* based on ipad - landscape */
-@media only screen and (max-width: 1050px)
-                   and (max-height: 800px)
-                   and (orientation: landscape) {
-  .container {
-    max-width: 100%;
-  }
-
-  .card {
-    font-size: 5em;
-  }
-
-  .show {
-    width: 600px;
-    left: calc(50% - 300px);
-  }
-
-  h3 {
-    font-size: 3em;
-  }
-
-   p {
-    font-size: 2em;
-  }
-
-  .show .star {
-    font-size: 5em;
-  }
-}
 
 /* based on ipad - portrait */
-@media only screen and (max-height: 1050px)
-                   and (max-width: 800px)
-                   and (orientation: portrait) {
+@media only screen and (min-height: 1000px) {
   .container {
     max-width: 100%;
   }
@@ -226,9 +195,7 @@ p {
 }
 
 /* based on iphone 6 - landscape */
-@media only screen and (max-height: 450px)
-                   and (max-width: 800px)
-                   and (orientation: landscape) {
+@media only screen and (max-height: 450px) {
   .card {
     height: 80px;
     width: calc((100% - 80px)/8);
@@ -275,8 +242,7 @@ p {
 
 
 /* based on iphone 6 */
-@media only screen and (max-width: 480px)
-                   and (orientation: portrait) {
+@media only screen and (max-width: 480px) {
   .card {
      height: 90px;
      font-size: 3em;
