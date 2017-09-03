@@ -4,7 +4,7 @@ This is a card matching memory game developed as part of the Udacity [Intro to P
 
 [MEMORY GAME](https://sbaker1505.github.io/Match_Game/)
 
----
+___
 
 ### Game Objectives
 There are 16 cards and the goal is to find all the matching pairs in a timely matter using the least number of moves. One move is equal to the selection of two cards. Selecting a card will turn it face up. Once a match is found the selected cards will remain face up and non matching cards will revert to being face down.
@@ -12,7 +12,7 @@ There are 16 cards and the goal is to find all the matching pairs in a timely ma
 ### Game Scoring
 The scoring is graphically shown with 3 solid stars that decrease based on number of moves. For a perfect score or 3 stars, you will need to match all the cards in under 12 moves. Alternatively, 2 stars equals 12 to 15 moves and 1 star equals 16 to 19 moves with 20 or more moves resulting in no stars.
 
----
+***
 
 ## Developer Notes
 1. The Javascript file utilizes the jQuery library. I have downloaded the jQuery version 3.2.1 file and it is located in the **js** folder.
