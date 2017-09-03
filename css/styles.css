@@ -277,16 +277,16 @@ p {
 /* based on iphone 6 */
 @media only screen and (max-device-width: 480px) {
   .card {
-    height: 105px;
-    font-size: 3em;
-  }
+     height: 90px;
+     font-size: 3em;
+   }
 
-  .show {
-    width: 250px;
-    height: 300px;
-    left: calc(50% - 125px);
-    top: calc(350px - 150px);
-  }
+   .show {
+     width: 250px;
+     height: 300px;
+     left: calc(50% - 125px);
+     top: calc(320px - 150px);
+   }
 
   h3 {
     font-size: 1.25em;
