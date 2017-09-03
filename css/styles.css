@@ -226,8 +226,8 @@ p {
 }
 
 /* based on iphone 6 - landscape */
-@media only screen and (max-device-height: 400px)
-                   and (max-device-width: 700px)
+@media only screen and (max-device-height: 450px)
+                   and (max-device-width: 800px)
                    and (orientation: landscape) {
   .card {
     height: 80px;
