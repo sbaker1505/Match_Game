@@ -275,7 +275,8 @@ p {
 
 
 /* based on iphone 6 */
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px)
+                   and (orientation: portrait) {
   .card {
      height: 90px;
      font-size: 3em;
