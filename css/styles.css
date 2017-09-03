@@ -184,6 +184,10 @@ p {
     max-width: 100%;
   }
 
+  .card {
+    font-size: 5em;
+  }
+
   .show {
     width: 600px;
     left: calc(50% - 300px);
@@ -212,6 +216,7 @@ p {
 
   .card {
     height: 190px;
+    font-size: 6em;
   }
 
   .show {
@@ -219,6 +224,55 @@ p {
     top: calc(520px - 250px);
   }
 }
+
+/* based on iphone 6 - landscape */
+@media only screen and (max-device-height: 400px)
+                   and (max-device-width: 700px)
+                   and (orientation: landscape) {
+  .card {
+    height: 80px;
+    width: calc((100% - 80px)/8);
+    font-size: 2.5em;
+  }
+
+  header {
+    height: 65px
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .show {
+    height: 150px;
+    width: 500px;
+    left: calc(50% - 250px);
+    top: calc(185px - 75px);
+  }
+
+  h3 {
+    font-size: 2em;
+    margin: 5px;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  .show .star {
+    font-size: 1.25em;
+    margin: 5px 0;
+  }
+
+  .show .star li {
+    padding: 50px;
+  }
+}
+
 
 /* based on iphone 6 */
 @media only screen and (max-device-width: 480px) {
