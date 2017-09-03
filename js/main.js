@@ -32,11 +32,11 @@ $('.star').html(stars.repeat(3));
 // Stars change to empty stars based on number of moves
 function starCount() {
   switch(move){
-    case 18:
+    case 20:
       $('.star li:first-child').addClass('entypo-star-empty');
-    case 14:
+    case 16:
       $('.star li:nth-child(2)').addClass('entypo-star-empty');
-    case 9:
+    case 12:
       $('.star li:last-child').addClass('entypo-star-empty');
   }
 }
