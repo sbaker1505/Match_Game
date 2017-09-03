@@ -177,8 +177,8 @@ p {
 
 /* media query */
 /* based on ipad - landscape */
-@media only screen and (max-device-width: 1050px)
-                   and (max-device-height: 800px)
+@media only screen and (max-width: 1050px)
+                   and (max-height: 800px)
                    and (orientation: landscape) {
   .container {
     max-width: 100%;
@@ -207,8 +207,8 @@ p {
 }
 
 /* based on ipad - portrait */
-@media only screen and (max-device-height: 1050px)
-                   and (max-device-width: 800px)
+@media only screen and (max-height: 1050px)
+                   and (max-width: 800px)
                    and (orientation: portrait) {
   .container {
     max-width: 100%;
@@ -226,10 +226,10 @@ p {
 }
 
 /* based on iphone 6 - landscape */
-@media only screen and (max-device-height: 450px)
-                   and (min-device-height: 300px)
-                   and (max-device-width: 800px)
-                   and (min-device-width: 600px)
+@media only screen and (max-height: 450px)
+                   and (min-height: 300px)
+                   and (max-width: 800px)
+                   and (min-width: 600px)
                    and (orientation: landscape) {
   .card {
     height: 80px;
@@ -277,7 +277,7 @@ p {
 
 
 /* based on iphone 6 */
-@media only screen and (max-device-width: 480px)
+@media only screen and (max-width: 480px)
                    and (orientation: portrait) {
   .card {
      height: 90px;
