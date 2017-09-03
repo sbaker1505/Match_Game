@@ -2,11 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i|Playfair+Display+SC:900i');
 
 /* entypo */
+
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
 
 /* zocial */
+
 [class*="zocial-"]:before {
   font-family: 'zocial', sans-serif;
 }
@@ -161,33 +163,45 @@ p {
 }
 
 @keyframes shake {
-  0% {left: 5px;}
-  50% {right: -5px;}
+  0% {
+    left: 5px;
+  }
+  50% {
+    right: -5px;
+  }
 }
 
 @keyframes scale {
-  25% {transform: scale(1.25);}
-  75% {transform: scale(0.75);}
+  25% {
+    transform: scale(1.25);
+  }
+  75% {
+    transform: scale(0.75);
+  }
 }
 
 @keyframes rotate {
-  0% {transform: rotateY(180deg);}
-  50% {transform: rotateY(0deg);}
+  0% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
 }
 
-/* media query */
+
+/* media queries */
 
 /* based on ipad - portrait */
+
 @media only screen and (min-height: 1000px) {
   .container {
     max-width: 100%;
   }
-
   .card {
     height: 190px;
     font-size: 6em;
   }
-
   .show {
     height: 500px;
     top: calc(520px - 250px);
@@ -195,75 +209,64 @@ p {
 }
 
 /* based on iphone 6 - landscape */
+
 @media only screen and (max-height: 450px) {
   .card {
     height: 80px;
     width: calc((100% - 80px)/8);
     font-size: 2.5em;
   }
-
   header {
     height: 65px
   }
-
   h1 {
     font-size: 2em;
   }
-
   h2 {
     font-size: 1em;
   }
-
   .show {
     height: 150px;
     width: 500px;
     left: calc(50% - 250px);
     top: calc(185px - 75px);
   }
-
   h3 {
     font-size: 2em;
     margin: 5px;
   }
-
   p {
     font-size: 1.2em;
   }
-
   .show .star {
     font-size: 1.25em;
     margin: 5px 0;
   }
-
   .show .star li {
     padding: 50px;
   }
 }
 
-
 /* based on iphone 6 */
+
 @media only screen and (max-width: 480px) {
   .card {
-     height: 90px;
-     font-size: 3em;
-   }
-
-   .show {
-     width: 250px;
-     height: 300px;
-     left: calc(50% - 125px);
-     top: calc(320px - 150px);
-   }
-
+    height: 90px;
+    font-size: 3em;
+  }
+  .show {
+    width: 250px;
+    height: 300px;
+    left: calc(50% - 125px);
+    top: calc(320px - 150px);
+  }
   h3 {
     font-size: 1.25em;
     font-weight: 400;
   }
-
   p {
     font-size: 1.1em;
   }
-
   .show .star {
     font-size: 2.5em;
   }
