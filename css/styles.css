@@ -132,7 +132,7 @@ li {
 
 .wrong {
   position: relative;
-  background-color: red;
+  background-color: #a10115;
   animation-name: shake;
   animation-duration: 150ms;
   animation-iteration-count: infinite;
